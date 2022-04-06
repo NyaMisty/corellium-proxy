@@ -18,5 +18,5 @@ RUN wget -O /tmp/gost.gz https://github.com/ginuerzh/gost/releases/download/v2.1
 
 RUN systemctl enable add_iprule
 RUN systemctl enable usbfluxd usbfluxd-proxy
-RUN systemctl enable openvpn@main socks-proxy
+RUN systemctl enable openvpn-client@main socks-proxy
 RUN systemctl enable avahi-daemon

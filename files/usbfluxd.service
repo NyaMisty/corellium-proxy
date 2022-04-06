@@ -1,7 +1,7 @@
 [Unit]
 Description=usbfluxd from corellium
 After=network.target
-After=openvpn@main.service
+After=system-openvpn.slice
 
 [Service]
 Type=simple

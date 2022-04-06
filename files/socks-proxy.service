@@ -1,7 +1,7 @@
 [Unit]
 Description=Socks proxy to export openvpn network
 After=network.target
-After=openvpn.service
+After=system-openvpn.slice
 
 [Service]
 Type=simple
