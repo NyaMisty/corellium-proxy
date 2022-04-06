@@ -3,7 +3,7 @@ FROM jrei/systemd-ubuntu:22.04
 RUN apt-get update && \
     apt-get install -y usbmuxd openvpn \
         avahi-daemon \
-        ipcalc net-tools \
+        ipcalc-ng net-tools \
         socat \
         wget curl vim
 
