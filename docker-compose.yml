@@ -17,7 +17,7 @@ services:
             - /run/lock
             - /tmp
         volumes:
-            - ./main.ovpn:/etc/openvpn/client/main.conf
+            - ./config.ovpn:/etc/openvpn/main.conf
             - /sys/fs/cgroup:/sys/fs/cgroup
         ports:
             - 5000:5000
