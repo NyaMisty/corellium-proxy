@@ -1,11 +1,11 @@
-FROM jrei/systemd-ubuntu:20.04
+FROM jrei/systemd-ubuntu:22.04
 
 RUN apt-get update && \
-    apt-get install -y usbmuxd openvpn && \
-    apt-get install -y avahi-daemon && \
-    apt-get install -y ipcalc net-tools && \
-    apt-get install -y socat && \
-    apt-get install -y wget curl vim
+    apt-get install -y usbmuxd openvpn \
+        avahi-daemon \
+        ipcalc net-tools \
+        socat \
+        wget curl vim
 
 COPY files/journald.conf /etc/systemd
 
