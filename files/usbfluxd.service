@@ -1,0 +1,11 @@
+[Unit]
+Description=usbfluxd from corellium
+After=network.target
+After=openvpn@main.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/usbfluxd --no-usbmuxd
+
+[Install]
+WantedBy=multi-user.target

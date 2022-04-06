@@ -1,0 +1,11 @@
+[Unit]
+Description=Proxy for usbfluxd
+After=network.target
+After=usbfluxd.service
+
+[Service]
+Type=simple
+ExecStart=socat tcp-listen:5000,fork unix-connect:/var/run/usbmuxd
+
+[Install]
+WantedBy=multi-user.target

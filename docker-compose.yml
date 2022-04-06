@@ -1,0 +1,25 @@
+version: "3"
+
+# Try `docker-compose up`
+
+services:
+    ovpn_proxy:
+        build: .
+        cap_add:
+            - NET_ADMIN
+        devices:
+            - /dev/net/tun
+        dns:
+            - 1.1.1.1
+            - 1.0.0.1
+        tmpfs:
+            - /run
+            - /run/lock
+            - /tmp
+        volumes:
+            - ./config.ovpn:/etc/openvpn/main.conf
+            - /sys/fs/cgroup:/sys/fs/cgroup:ro
+        ports:
+            - 5000:5000
+            - 5080:5080
+        restart: always

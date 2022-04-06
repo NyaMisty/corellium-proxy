@@ -1,0 +1,11 @@
+[Unit]
+Description=Socks proxy to export openvpn network
+After=network.target
+After=openvpn.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/gost -L socks5://:5080
+
+[Install]
+WantedBy=multi-user.target
