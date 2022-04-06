@@ -5,6 +5,7 @@ version: "3"
 services:
     ovpn_proxy:
         image: ghcr.io/nyamisty/corellium-proxy
+        tty: true
         cap_add:
             - NET_ADMIN
         devices:
