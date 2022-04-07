@@ -19,8 +19,11 @@ services:
             - /tmp
         volumes:
             - ./config.ovpn:/etc/openvpn/client/corellium.conf
+            - ./npsconf:/etc/nps/conf
             - /sys/fs/cgroup:/sys/fs/cgroup
         ports:
-            - 5000:5000
-            - 5080:5080
+            - 15000:5000
+            - 15010:8080
+            - 15011:5080
+            - "15100-15500:15100-15500"
         restart: always
