@@ -1,10 +1,10 @@
 [Unit]
 Description=usbfluxd from corellium
 #After=network.target
-#After=system-openvpn.slice
-BindsTo=sys-devices-virtual-net-tap0.device
-Wants=sys-devices-virtual-net-tap0.device
-After=sys-devices-virtual-net-tap0.device
+After=corellium-openvpn.service
+#BindsTo=sys-devices-virtual-net-tap0.device
+#Wants=sys-devices-virtual-net-tap0.device
+#After=sys-devices-virtual-net-tap0.device
 
 [Service]
 Type=simple

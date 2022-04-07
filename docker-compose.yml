@@ -18,7 +18,7 @@ services:
             - /run/lock
             - /tmp
         volumes:
-            - ./config.ovpn:/etc/openvpn/main.conf
+            - ./config.ovpn:/etc/openvpn/client/corellium.conf
             - /sys/fs/cgroup:/sys/fs/cgroup
         ports:
             - 5000:5000
