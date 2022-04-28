@@ -28,7 +28,7 @@ RUN touch /run/systemd/system && \
 VOLUME /etc/nps/conf
 
 RUN systemctl enable add_iprule
-RUN systemctl enable usbfluxd usbfluxd-proxy
+RUN systemctl disable usbfluxd usbfluxd-proxy
 RUN systemctl enable corellium-openvpn socks-proxy
 RUN systemctl enable avahi-daemon
 RUN systemctl enable Nps Npc
